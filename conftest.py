@@ -13,7 +13,8 @@ from locators import (input_email, input_password, button_login, button_logout, 
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    return driver
+    yield driver
+    driver.quit()
 
 
 @pytest.fixture(scope='function')

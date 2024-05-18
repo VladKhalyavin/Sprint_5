@@ -22,4 +22,3 @@ class TestConstructor:
         driver.find_element(By.XPATH, navigation).click()
         assert (driver.find_element(By.XPATH, header).is_displayed() and
                 'tab_tab_type_current' in driver.find_element(By.XPATH, div).get_attribute('class'))
-        driver.quit()

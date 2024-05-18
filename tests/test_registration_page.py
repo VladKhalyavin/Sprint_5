@@ -17,7 +17,6 @@ class TestRegistration:
         driver.find_element(By.XPATH, button_registration).click()
         WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, button_login)))
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
-        driver.quit()
 
     def test_registration_short_password_registration_failed(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/register')
@@ -27,4 +26,3 @@ class TestRegistration:
         driver.find_element(By.XPATH, input_password).send_keys(RandomAccountData.password(5))
         driver.find_element(By.XPATH, button_registration).click()
         assert driver.find_element(By.CSS_SELECTOR, '.input__error').text == 'Некорректный пароль'
-        driver.quit()
