@@ -24,7 +24,6 @@ def authorization(driver):
     driver.find_element(By.XPATH, input_password).send_keys(password)
     driver.find_element(By.XPATH, button_login).click()
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, button_checkout_main_page)))
-    return driver
 
 
 @pytest.fixture(scope='function')
