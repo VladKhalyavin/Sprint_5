@@ -33,6 +33,3 @@ class RandomAccountData:
             n += 1
         return password
 
-
-print(RandomAccountData.login())
-print(RandomAccountData.password(6))
