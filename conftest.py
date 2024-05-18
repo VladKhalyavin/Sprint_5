@@ -3,12 +3,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+from data import login, password
 from locators import (input_email, input_password, button_login, button_logout, button_checkout_main_page,
                       header_profile)
 
-
-login = 'vladislavkhalyavin1997@yandex.ru'
-password = '1q2w3e'
 
 
 @pytest.fixture(scope='function')
