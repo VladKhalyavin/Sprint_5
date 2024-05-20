@@ -26,4 +26,3 @@ class TestAuthorization:
         WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, button_checkout_main_page)))
         assert (driver.current_url == 'https://stellarburgers.nomoreparties.site/'
                 and driver.find_element(By.XPATH, button_checkout_main_page))
-        driver.quit()
